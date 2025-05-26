@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="License\License.lic" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="UnifiedAutomation.UaBase" Version="3.4.0" />
+    <PackageReference Include="UnifiedAutomation.UaBase.Windows" Version="3.4.0" />
+    <PackageReference Include="UnifiedAutomation.UaClient" Version="3.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="BrowseControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="BrowseControl.Designer.cs">
+      <DependentUpon>BrowseControl.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="BrowseControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BrowseControl.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>
